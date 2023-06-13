@@ -1,0 +1,10 @@
+
+.whatsapp{                      /*icono whatsapp fixed*/
+    max-width: 4em;
+    position: fixed;
+        right: 20px;
+        bottom: 30px;
+    &:hover{                     /* animacion para el icono de whatsapp */
+    transform: scale(1.5);
+}    
+}

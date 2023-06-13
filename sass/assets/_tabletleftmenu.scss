@@ -1,0 +1,63 @@
+/* asignacion de espacio en la grid area */
+@use "./var";
+.seccionmenu{
+    grid-area:seccionmenu;
+}
+
+/* mobile */
+@media screen and (max-width:576px){
+    .seccionmenu{
+        display: none;
+    }        
+}
+
+/* tablet */
+@media screen and (min-width:577px) and (max-width:768px){
+    .menuexpandible{
+        display: none;
+    }
+    .seccionmenu{
+        padding: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var.$sidebg;
+        overflow: hidden;
+            img{
+            display:block;
+            max-width: 60%;
+            max-height: auto;
+            border-radius: 40%;
+            margin-bottom: 1em;
+            margin: auto;
+            &:active{
+                transform: scale(.9);
+            }
+            }
+            .listanavmenu{
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+                li{
+                margin: 40px 0px;
+                a{
+                    color: var.$footer-font;
+                    text-decoration: none;
+}
+}
+}
+}
+}
+/* desktop*/
+@media screen and (min-width: 769px){
+    .seccionmenu{
+        display: none;
+    }      
+}
+
+
+
+
+
+

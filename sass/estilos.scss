@@ -1,0 +1,456 @@
+@use "assets/footer";
+@use "assets/header";
+@use "assets/tabletleftmenu";
+@use "assets/whatsappicon";
+@use "assets/var";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"nunito",sans-serif;
+}
+body{
+    background-image: radial-gradient((#EFE6DD,#D8C2AC));
+}
+
+/* asignacion de tamanio del contenedor */
+.contenedor{
+    width: 100vw;
+    height:100vh;
+    li{
+        list-style: none;
+
+    a{
+        text-decoration: none;
+    }
+    .navbar-toggler{
+        color:var.$sidebg;
+    }
+    }
+        .main{
+        grid-area:main;         /* asignacion de espacio en la grid area */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+            img{
+                margin: 1em;
+                max-width: 100%;
+                border-radius: 70px;
+                object-fit: cover;
+                align-self:center;
+                padding: 0 .5em;
+            }
+        }
+        .secundario{
+            grid-area:secundario;   /* asignacion de espacio en la grid area */
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 1em;
+            h1{
+                text-align:center;
+                text-decoration: underline;
+                font-size: 4em;
+                font-weight: 500;
+            }
+            h2{
+                font-size: 2em;
+                text-align: center;
+                }
+            p{
+                font-size: 1.2em;
+            }
+
+            .botonprod{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            color:var.$sidebg;
+            text-decoration: none;
+            border: 1px solid var.$sidebg;
+            border-radius: 20px;
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-top: 1em;
+            padding: 0px 2px;
+                &:hover{       /* animacion para el icono productos */
+                color: white ;
+                text-shadow: 8px 8px 6px var.$fontshadow;
+                box-shadow: 8px 8px 6px var.$fontshadow;
+                &:active{
+                    transform:scale(.8);
+                }
+                }
+                }
+                }
+}
+
+/* PAGINA RECETAS RESPOSIVE+BOOTSTRAP */
+.recetascentral{
+    h1{
+    text-align:center;
+    font-size: 4em;
+    font-weight: 500;
+    padding: 0 1em;
+    }
+    .articulosuperior, .articuloinferior{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        a{
+            box-sizing: content-box;
+            margin:auto;
+            padding: 0 2px;
+        }
+    }
+    h2{
+        text-decoration: underline;
+        font-size: 2em;
+    }
+    p{
+        font-size: 1.1em;
+        text-align: center;
+        padding: 1em;
+    }
+    .botonvermas{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        color:#A54657;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid #A54657;
+        border-radius: 20px;
+        font-size: 2.5em;
+        padding: 0px 2px;
+        &:hover{       /* animacion para el icono ver mas */
+            color: white ;
+            text-shadow: 8px 8px 6px grey;
+            box-shadow: 8px 8px 6px grey;
+        &:active{
+            transform:scale(.8);
+        }
+        }
+    }
+}
+    /* PAGINA PRODUCTOS RESPOSIVE+BOOTSTRAP */
+    .productoscentral{
+        text-align: center;
+            img{
+                max-width: 50%;
+                max-height: auto;
+                border-radius: 20%;
+                object-fit: fill;
+                text-align: center;
+                margin: 5px;
+                }
+            h1{
+                text-align:center;
+                font-size: 4em;
+                font-weight: 500;
+                }
+            h2{
+                font-size: 2em;
+                }
+            p{
+                font-size: 1.2em;
+                }
+            .productoslista{
+                .botonvermas{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+                    color:var.$sidebg;
+                    text-decoration: none;
+                    text-align: center;
+                    border: 1px solid var.$sidebg;
+                    border-radius: 20px;
+                    font-size: 2.5em;
+                    padding: 0px 2px;
+                    &:hover{       /* animacion para el icono ver mas */
+                        color: white ;
+                        text-shadow: 8px 8px 6px var.$fontshadow;
+                        box-shadow: 8px 8px 6px var.$fontshadow;
+                    &:active{
+                        transform:scale(.8);
+                                }
+                                }
+                            }
+                            }
+    }
+ /* PAGINA QUIENES SOMOS RESPOSIVE+BOOTSTRAP */
+.quienessomoscentral{
+    h1{
+        text-align: center;
+        font-size: 4em;
+        font-weight: 500;
+    }
+    h2{
+        text-align: center;
+    }
+    .artquienessomos {
+        color: var.$hovercolor;
+        font-weight: 700;
+        background-image: url(../img/cupcakes.jpg);
+        background-position: center center;
+        background-size: cover;
+        background: fill;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5em;
+    }
+}
+
+/* PAGINA CONTACTO RESPONSIVE +BOOTSTRAP */
+.contactocentral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .datoscontacto{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.5em;
+            border-radius: 20px;
+            max-width: 100%;
+            max-height: 100%;
+            border: 2px solid var.$bordesmarrones;
+            padding: 1em 2em;
+            margin-bottom: 1em;
+            align-items: start;
+            background:var.$formbg ;
+            color:var.$sidebg ;
+                li{
+                    list-style: none;
+                }
+                        }
+        .formulariocontacto{
+            form{
+                font-size: 1.5em;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 100%;
+                max-height: 100%;
+                border: 2px solid var.$bordesmarrones;
+                padding: 1em 3em;
+                text-align: start;
+                margin-bottom: 1em;
+                background: var.$formbg;
+                    input,textarea,label,button {
+                        display: block;
+                        margin: .5em;
+                        align-items: start;
+            }
+                        }
+        .ubicacion{     
+            max-width: 100%;
+            max-height: auto;
+            padding: 1em;
+                    }
+}
+}
+/* mobile */
+@media screen and (max-width:576px){
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .75fr 1fr 1fr .75fr;
+    grid-template-areas:
+            "header"
+            "main"
+            "secundario"
+            "footer";
+            }
+    a{
+        text-align: center;
+    }        
+.menuizquierdo{
+    display: none;
+            }
+.menuexpandible{
+    display: flex;
+    align-self: start;
+            }
+
+h1{
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-align: center;
+}
+.torta{
+    padding: 0 .5em;
+    max-width:100%;
+    max-height:80%;
+    border-radius: 50px;
+    object-fit: fill;
+    margin-bottom: 2px;
+}
+.recetascentral{
+    padding: .5px;
+    flex-direction: column;
+    text-align:center;
+    img{
+        max-width: 70%;
+        border-radius: 20px;
+    }
+    .botonvermas{
+        max-width: 30%;
+    }
+}
+
+.productoscentral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    .productoslista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .botonvermas{
+        max-width: 60%;
+        margin: auto;
+    }
+}
+.ubicacion{
+    max-width: 100%;
+    padding: 0 2px;
+}
+}
+/* tablet */
+@media screen and (min-width:577px) and (max-width:768px){
+.contenedor{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% auto auto auto;
+    grid-template-areas:
+    "header         header  header"
+    "seccionmenu    main    main"
+    "seccionmenu    secundario secundario"
+    "footer         footer  footer";
+    }
+    .torta{
+        padding: 0 .8em;
+        max-width:100%;
+        max-height:90%;
+        border-radius: 50px;
+        object-fit: fill;
+        align-self: center;
+        }
+    a{
+        text-align: center;
+        }
+.recetascentral{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content:center ;
+    text-align: center;
+    h1{
+        font-size: 2em;
+        margin-top: 10px;
+        }
+    h2{
+            font-size: 1.5em;
+        }
+    img{
+        max-width: 60%;
+        max-height: 20%;
+        object-fit: scale-down;
+        border-radius: 20px;
+    }
+    .botonvermas{
+        max-width: 42%;
+    }
+}
+.productoslista{
+    .botonvermas{
+        max-width: 50%;
+        margin: auto;
+    }
+}
+.ubicacion{
+    max-width: 100%;
+}
+}
+
+
+
+
+
+/*desktop*/
+@media screen and (min-width: 769px){
+.contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 21% auto auto;
+        grid-template-areas:
+            "header header"
+            "main   secundario"
+            "footer footer";
+    }
+        .recetascentral{
+        padding: .5px;
+        flex-direction: column;
+        text-align:center;
+            img{
+        max-width: 50%;
+        border-radius: 20px;
+        margin: 1em 0;
+        }
+        .botonvermas{
+            max-width: 20%;
+        }
+    }
+    .botonvermas{
+        max-width: 100%;
+    }
+    .productoslista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        img{
+            max-width: 60%;
+            max-height: auto;
+        }
+        .botonvermas{
+                max-width: 20%;
+                margin: auto;
+            }
+        }
+    }
+    .quienessomos{
+        h1{
+            text-align: center;
+            font-size: 4em;
+            font-weight: 500;
+        }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+/* asignacion de espacio en la grid area */
+@use "./var";
+.footer{
+    grid-area: footer;
+    background-color:var.$footerbg;
+    padding-top: 15px;
+    max-width: 100%;
+    color:var.$footer-font;
+        p{
+        color: var.$footer-font;
+        text-align: center;
+    }
+        li{
+            list-style: none;
+        }
+    nav{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .logoRedSocial{            
+        max-width: 3.5em;
+        max-height: 3.5em;
+    }
+    .links a{
+        font-size: 1em;
+        font-weight: 600;
+        text-decoration: none;
+        color: var.$footer-font;
+        &:hover{            /* animacion para los botones*/
+            color: var.$hovercolor;
+            text-shadow: 1px 8px 4px grey;
+        &:active{
+            font-size: 1.5em;
+            }
+            }
+    }
+}   
+}
+
+/* desktop */
+@media screen and (min-width: 769px){
+    p{
+        text-align: center;
+        
+        
+}
+}
+
+/* tablet */
+@media screen and (min-width:577px) and (max-width:768px){
+    .footer{
+        margin:0px;
+    }
+}
