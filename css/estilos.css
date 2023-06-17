@@ -65,8 +65,8 @@
   padding: 1em;
 }
 .header .logo {
-  max-width: 6em;
-  max-height: 6em;
+  max-width: 8em;
+  max-height: 8em;
   justify-self: center;
   align-self: center;
 }
@@ -107,11 +107,11 @@
   .listanav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
   .listanav li {
-    margin: 0 4em;
+    margin: 0 2em;
   }
   .listanav li a {
     font-size: 1.5em;
@@ -145,16 +145,16 @@
     display: none;
   }
   .seccionmenu {
-    padding: 1px;
+    padding: 2em 1px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: #A54657;
     overflow: hidden;
   }
   .seccionmenu img {
     display: block;
-    max-width: 60%;
+    max-width: 70%;
     max-height: auto;
     border-radius: 40%;
     margin-bottom: 1em;
@@ -164,13 +164,14 @@
     transform: scale(0.9);
   }
   .seccionmenu .listanavmenu {
-    padding: 0px;
+    padding: 5px 1px;
     display: flex;
     flex-direction: column;
     text-align: center;
   }
   .seccionmenu .listanavmenu li {
     margin: 40px 0px;
+    list-style: none;
   }
   .seccionmenu .listanavmenu li a {
     color: #D8C2AC;
@@ -225,11 +226,22 @@ body {
 }
 .contenedor .main img {
   margin: 1em;
-  max-width: 100%;
+  max-width: 50%;
   border-radius: 70px;
   object-fit: cover;
   align-self: center;
   padding: 0 0.5em;
+  animation: expandir;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+@keyframes expandir {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 .contenedor .secundario {
   grid-area: secundario; /* asignacion de espacio en la grid area */
@@ -344,6 +356,9 @@ body {
 .productoscentral p {
   font-size: 1.2em;
 }
+.productoscentral .productoslista div {
+  margin-bottom: 3em;
+}
 .productoscentral .productoslista .botonvermas {
   display: flex;
   flex-direction: column;
@@ -396,6 +411,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 2em;
 }
 .contactocentral h2 {
   text-align: center;
@@ -406,10 +422,11 @@ body {
 .contactocentral .datoscontacto {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   font-size: 1.5em;
   border-radius: 20px;
   max-width: 100%;
-  max-height: 100%;
+  max-height: auto;
   border: 2px solid #56252E;
   padding: 1em 2em;
   margin-bottom: 1em;
@@ -420,6 +437,11 @@ body {
 .contactocentral .datoscontacto li {
   list-style: none;
 }
+.contactocentral .formulariocontacto {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
 .contactocentral .formulariocontacto form {
   font-size: 1.5em;
   border-radius: 20px;
@@ -427,9 +449,9 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   max-width: 100%;
-  max-height: 100%;
+  max-height: auto;
   border: 2px solid #56252E;
-  padding: 1em 3em;
+  padding: 1em 2em;
   text-align: start;
   margin-bottom: 1em;
   background: #D5CAD6;
@@ -515,7 +537,7 @@ body {
   .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15% auto auto auto;
+    grid-template-rows: 20% auto auto auto;
     grid-template-areas: "header         header  header" "seccionmenu    main    main" "seccionmenu    secundario secundario" "footer         footer  footer";
   }
   .torta {
@@ -553,7 +575,8 @@ body {
     max-width: 42%;
   }
   .productoslista .botonvermas {
-    max-width: 50%;
+    min-width: 45%;
+    max-width: 55%;
     margin: auto;
   }
   .ubicacion {
@@ -565,7 +588,7 @@ body {
   .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 21% auto auto;
+    grid-template-rows: 25% 70% auto;
     grid-template-areas: "header header" "main   secundario" "footer footer";
   }
   .recetascentral {
@@ -596,7 +619,8 @@ body {
     max-height: auto;
   }
   .productoslista .botonvermas {
-    max-width: 20%;
+    min-width: 25%;
+    max-width: 28%;
     margin: auto;
   }
 }

@@ -16,16 +16,21 @@
     .menuexpandible{
         display: none;
     }
+    // .menuizquierdo{
+    //     display: flex;
+    //     flex-direction: column;
+    //     height: 100%;
+    // }
     .seccionmenu{
-        padding: 1px;
+        padding: 2em 1px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         background: var.$sidebg;
         overflow: hidden;
             img{
             display:block;
-            max-width: 60%;
+            max-width: 70%;
             max-height: auto;
             border-radius: 40%;
             margin-bottom: 1em;
@@ -35,12 +40,13 @@
             }
             }
             .listanavmenu{
-            padding: 0px;
+            padding: 5px 1px ;
             display: flex;
             flex-direction: column;
             text-align: center;
                 li{
                 margin: 40px 0px;
+                list-style: none;
                 a{
                     color: var.$footer-font;
                     text-decoration: none;

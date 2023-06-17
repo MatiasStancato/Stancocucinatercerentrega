@@ -35,12 +35,23 @@ body{
         justify-content: center;
             img{
                 margin: 1em;
-                max-width: 100%;
+                max-width: 50%;
                 border-radius: 70px;
                 object-fit: cover;
                 align-self:center;
                 padding: 0 .5em;
+                animation: expandir;
+                animation-duration: 3s;
+                animation-timing-function: ease-in;
             }
+            @keyframes expandir{
+            from{
+            width: 0%;
+                }
+                to{
+                    width: 100%;
+                }
+            }    
         }
         .secundario{
             grid-area:secundario;   /* asignacion de espacio en la grid area */
@@ -158,6 +169,9 @@ body{
                 font-size: 1.2em;
                 }
             .productoslista{
+                div{
+                    margin-bottom: 3em;
+                }
                 .botonvermas{
                     display: flex;
                     flex-direction: column;
@@ -169,6 +183,7 @@ body{
                     border-radius: 20px;
                     font-size: 2.5em;
                     padding: 0px 2px;
+
                     &:hover{       /* animacion para el icono ver mas */
                         color: white ;
                         text-shadow: 8px 8px 6px var.$fontshadow;
@@ -213,6 +228,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 2em;
         h2{
             text-align: center;
         }
@@ -222,10 +238,11 @@ body{
         .datoscontacto{
             display: flex;
             flex-direction: column;
+            justify-content: start;
             font-size: 1.5em;
             border-radius: 20px;
             max-width: 100%;
-            max-height: 100%;
+            max-height: auto;
             border: 2px solid var.$bordesmarrones;
             padding: 1em 2em;
             margin-bottom: 1em;
@@ -237,6 +254,9 @@ body{
                 }
                         }
         .formulariocontacto{
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
             form{
                 font-size: 1.5em;
                 border-radius: 20px;
@@ -244,9 +264,9 @@ body{
                 flex-direction: column;
                 justify-content: space-evenly;
                 max-width: 100%;
-                max-height: 100%;
+                max-height: auto;
                 border: 2px solid var.$bordesmarrones;
-                padding: 1em 3em;
+                padding: 1em 2em;
                 text-align: start;
                 margin-bottom: 1em;
                 background: var.$formbg;
@@ -339,7 +359,7 @@ h1{
 .contenedor{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15% auto auto auto;
+    grid-template-rows: 20% auto auto auto;
     grid-template-areas:
     "header         header  header"
     "seccionmenu    main    main"
@@ -376,13 +396,15 @@ h1{
         object-fit: scale-down;
         border-radius: 20px;
     }
+
     .botonvermas{
         max-width: 42%;
     }
 }
 .productoslista{
     .botonvermas{
-        max-width: 50%;
+        min-width: 45%;
+        max-width: 55%;
         margin: auto;
     }
 }
@@ -400,9 +422,9 @@ h1{
 .contenedor{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 21% auto auto;
+        grid-template-rows: 25% 70% auto;
         grid-template-areas:
-            "header header"
+            "header header" 
             "main   secundario"
             "footer footer";
     }
@@ -428,12 +450,14 @@ h1{
         justify-content: center;
         text-align: center;
         align-items: center;
+
         img{
             max-width: 60%;
             max-height: auto;
         }
         .botonvermas{
-                max-width: 20%;
+                min-width: 25%;
+                max-width: 28%;
                 margin: auto;
             }
         }
