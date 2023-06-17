@@ -57,20 +57,23 @@ body{
             grid-area:secundario;   /* asignacion de espacio en la grid area */
             display:flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            padding: 1em;
+            justify-content: center;
+            padding: .5em;
+
             h1{
                 text-align:center;
                 text-decoration: underline;
                 font-size: 4em;
                 font-weight: 500;
+                margin-bottom: 1em;
             }
             h2{
                 font-size: 2em;
                 text-align: center;
+
                 }
             p{
-                font-size: 1.2em;
+                font-size: 1em;
             }
 
             .botonprod{
@@ -83,7 +86,6 @@ body{
             border-radius: 20px;
             font-size: 2.5em;
             font-weight: 300;
-            margin-top: 1em;
             padding: 0px 2px;
                 &:hover{       /* animacion para el icono productos */
                 color: white ;
@@ -422,11 +424,12 @@ h1{
 .contenedor{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 25% 70% auto;
+        grid-template-rows: 25% auto auto;
         grid-template-areas:
             "header header" 
             "main   secundario"
             "footer footer";
+    }
     }
         .recetascentral{
         padding: .5px;
@@ -461,13 +464,14 @@ h1{
                 margin: auto;
             }
         }
-    }
+    
     .quienessomos{
         h1{
             text-align: center;
             font-size: 4em;
             font-weight: 500;
         }
+
 }
 
 
