@@ -407,7 +407,7 @@ h1{
 .contenedor{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% auto auto 20%;
+    grid-template-rows: 25% auto auto 20%;
     grid-template-areas:
     "header         header  header"
     "seccionmenu    main    main"
