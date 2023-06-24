@@ -501,6 +501,9 @@ h1{
             "main   secundario"
             "footer footer";
     }
+    .header{
+        max-height: 100%;
+    }
     .recetaarticulos{
         display: flex;
         flex-direction: row;
