@@ -89,7 +89,7 @@
 /* tablet */
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .logo {
-    margin-top: 0.5;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
 }
@@ -107,11 +107,11 @@
   .listanav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
   .listanav li {
-    margin: 0 2em;
+    margin: 0 5em;
   }
   .listanav li a {
     font-size: 1.5em;
@@ -155,7 +155,7 @@
   .seccionmenu img {
     display: block;
     max-width: 70%;
-    max-height: auto;
+    max-height: 100%;
     border-radius: 40%;
     margin-bottom: 1em;
     margin: auto;
@@ -225,30 +225,32 @@ body {
   justify-content: center;
 }
 .contenedor .main img {
-  margin: 1em;
-  max-width: 50%;
-  border-radius: 70px;
-  object-fit: cover;
+  max-height: 95%;
+  max-width: 80%;
   align-self: center;
+  border-radius: 80px;
   padding: 0 0.5em;
+  object-fit: scale-down;
   animation: expandir;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-timing-function: ease-in;
+  margin: 1em 0;
 }
 @keyframes expandir {
   from {
-    width: 0%;
+    scale: 0;
   }
   to {
-    width: 100%;
+    scale: 1;
   }
 }
 .contenedor .secundario {
   grid-area: secundario; /* asignacion de espacio en la grid area */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0.5em;
+  margin-bottom: 1em;
 }
 .contenedor .secundario h1 {
   text-align: center;
@@ -260,6 +262,7 @@ body {
 .contenedor .secundario h2 {
   font-size: 2em;
   text-align: center;
+  text-decoration: underline;
 }
 .contenedor .secundario p {
   font-size: 1em;
@@ -275,6 +278,7 @@ body {
   font-size: 2.5em;
   font-weight: 300;
   padding: 0px 2px;
+  margin-top: 1em;
 }
 .contenedor .secundario .botonprod:hover { /* animacion para el icono productos */
   color: white;
@@ -291,6 +295,11 @@ body {
   font-size: 4em;
   font-weight: 500;
   padding: 0 1em;
+  margin-top: 0.5em;
+  text-decoration: underline;
+}
+.recetascentral h2 {
+  text-decoration: underline;
 }
 .recetascentral .articulosuperior, .recetascentral .articuloinferior {
   display: flex;
@@ -302,10 +311,6 @@ body {
   box-sizing: content-box;
   margin: auto;
   padding: 0 2px;
-}
-.recetascentral h2 {
-  text-decoration: underline;
-  font-size: 2em;
 }
 .recetascentral p {
   font-size: 1.1em;
@@ -349,9 +354,11 @@ body {
   text-align: center;
   font-size: 4em;
   font-weight: 500;
+  text-decoration: underline;
 }
 .productoscentral h2 {
   font-size: 2em;
+  text-decoration: underline;
 }
 .productoscentral p {
   font-size: 1.2em;
@@ -382,17 +389,24 @@ body {
 
 /* PAGINA QUIENES SOMOS RESPOSIVE+BOOTSTRAP */
 .quienessomoscentral h1 {
+  color: #A54657;
   text-align: center;
   font-size: 4em;
   font-weight: 500;
+  text-decoration: underline;
 }
 .quienessomoscentral h2 {
+  color: #56252E;
   text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: underline;
 }
 .quienessomoscentral .artquienessomos {
-  color: rgb(249, 200, 200);
+  color: #56252E;
   font-weight: 700;
-  background-image: url(../img/cupcakes.jpg);
+  font-size: 1.2em;
+  background-image: url(../img/birthdaygirl.jpg);
   background-position: center center;
   background-size: cover;
   background: fill;
@@ -404,45 +418,62 @@ body {
   text-align: center;
   padding: 1.5em;
 }
+.quienessomoscentral .artquienessomos h2 {
+  font-size: 2em;
+}
 
 /* PAGINA CONTACTO RESPONSIVE +BOOTSTRAP */
 .contactocentral {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.contactocentral h1 {
+  font-size: 4em;
+  text-decoration: underline;
+  margin-top: 0.5em;
 }
 .contactocentral h2 {
-  text-align: center;
+  font-size: 2em;
+  text-decoration: underline;
 }
-.contactocentral p {
-  text-align: center;
+.contactocentral .contactos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2em 0;
 }
-.contactocentral .datoscontacto {
+.contactocentral .datosContacto {
+  max-height: 97%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
   font-size: 1.5em;
   border-radius: 20px;
   max-width: 100%;
   max-height: auto;
   border: 2px solid #56252E;
-  padding: 1em 2em;
-  margin-bottom: 1em;
-  align-items: start;
   background: #D5CAD6;
   color: #A54657;
 }
-.contactocentral .datoscontacto li {
+.contactocentral .datosContacto li {
   list-style: none;
+  text-align: start;
 }
-.contactocentral .formulariocontacto {
+.contactocentral .datosContacto p {
+  text-align: center;
+  margin: 1em;
+}
+.contactocentral .datosContacto h2 {
+  margin: 0.5em auto;
+}
+.contactocentral .formularioContacto {
   display: flex;
   flex-direction: column;
   max-width: 100%;
 }
-.contactocentral .formulariocontacto form {
+.contactocentral .formularioContacto form {
   font-size: 1.5em;
   border-radius: 20px;
   display: flex;
@@ -456,15 +487,13 @@ body {
   margin-bottom: 1em;
   background: #D5CAD6;
 }
-.contactocentral .formulariocontacto form input, .contactocentral .formulariocontacto form textarea, .contactocentral .formulariocontacto form label, .contactocentral .formulariocontacto form button {
+.contactocentral .formularioContacto form input, .contactocentral .formularioContacto form textarea, .contactocentral .formularioContacto form label, .contactocentral .formularioContacto form button {
   display: block;
   margin: 0.5em;
   align-items: start;
 }
-.contactocentral .formulariocontacto .ubicacion {
-  max-width: 100%;
-  max-height: auto;
-  padding: 1em;
+.contactocentral .ubicacion {
+  border-radius: 20px;
 }
 
 /* mobile */
@@ -503,12 +532,12 @@ body {
     flex-direction: column;
     text-align: center;
   }
-  .recetascentral img {
+  .recetascentral .recetaarticulos img {
     max-width: 70%;
     border-radius: 20px;
   }
-  .recetascentral .botonvermas {
-    max-width: 30%;
+  .recetascentral .recetaarticulos .botonvermas {
+    max-width: 50%;
   }
   .productoscentral {
     display: flex;
@@ -523,13 +552,20 @@ body {
     text-align: center;
     align-items: center;
   }
-  .productoscentral .botonvermas {
-    max-width: 60%;
+  .productoscentral .productosSuperior .botonvermas, .productoscentral .productosInferior .botonvermas {
+    max-width: 80%;
     margin: auto;
   }
-  .ubicacion {
+  .contactocentral .contactos {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactocentral .formularioContacto {
+    margin-top: 2em;
+  }
+  .contactocentral .ubicacion {
     max-width: 100%;
-    padding: 0 2px;
+    align-items: center;
   }
 }
 /* tablet */
@@ -537,7 +573,7 @@ body {
   .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% auto auto auto;
+    grid-template-rows: 20% auto auto 20%;
     grid-template-areas: "header         header  header" "seccionmenu    main    main" "seccionmenu    secundario secundario" "footer         footer  footer";
   }
   .torta {
@@ -560,27 +596,51 @@ body {
   }
   .recetascentral h1 {
     font-size: 2em;
-    margin-top: 10px;
+    margin-top: 1em;
   }
   .recetascentral h2 {
     font-size: 1.5em;
   }
-  .recetascentral img {
-    max-width: 60%;
-    max-height: 20%;
-    object-fit: scale-down;
+  .recetascentral .recetaarticulos img {
+    max-width: 100%;
+    max-height: auto;
     border-radius: 20px;
+    padding: 0 0.5em;
   }
-  .recetascentral .botonvermas {
-    max-width: 42%;
+  .recetascentral .recetaarticulos .botonvermas {
+    max-width: 50%;
   }
-  .productoslista .botonvermas {
-    min-width: 45%;
-    max-width: 55%;
+  .recetascentral .recetaarticulos h2 {
+    margin-top: 1em;
+  }
+  .productoscentral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+  }
+  .productoscentral .productoslista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .productoscentral .productosSuperior .botonvermas, .productoscentral .productosInferior .botonvermas {
+    max-width: 80%;
     margin: auto;
   }
-  .ubicacion {
+  .contactocentral .contactos {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactocentral .formularioContacto {
+    margin-top: 2em;
+  }
+  .contactocentral .ubicacion {
     max-width: 100%;
+    align-items: center;
+    border-radius: 20px;
   }
 }
 /*desktop*/
@@ -591,46 +651,51 @@ body {
     grid-template-rows: 25% auto auto;
     grid-template-areas: "header header" "main   secundario" "footer footer";
   }
-}
-.recetascentral {
-  padding: 0.5px;
-  flex-direction: column;
-  text-align: center;
-}
-.recetascentral img {
-  max-width: 50%;
-  border-radius: 20px;
-  margin: 1em 0;
-}
-.recetascentral .botonvermas {
-  max-width: 20%;
-}
-
-.botonvermas {
-  max-width: 100%;
-}
-
-.productoslista {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.productoslista img {
-  max-width: 60%;
-  max-height: auto;
-}
-.productoslista .botonvermas {
-  min-width: 25%;
-  max-width: 28%;
-  margin: auto;
-}
-
-.quienessomos h1 {
-  text-align: center;
-  font-size: 4em;
-  font-weight: 500;
+  .recetaarticulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .recetascentral {
+    padding: 0.5px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .recetascentral img {
+    max-width: 30em;
+    border-radius: 20px;
+    margin: 1em 0;
+  }
+  .recetascentral .botonvermas {
+    max-width: 30%;
+  }
+  .productoslista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 1em 1em;
+    padding: 0 1em;
+    text-align: center;
+  }
+  .productoslista img {
+    max-width: 60%;
+    max-height: auto;
+  }
+  .productoslista .botonvermas {
+    min-width: 25%;
+    max-width: 28%;
+    margin: auto;
+  }
+  p {
+    max-width: 80%;
+    margin: 1em auto;
+  }
+  .quienessomos h1 {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 500;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

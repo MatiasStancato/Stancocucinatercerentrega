@@ -9,6 +9,7 @@
     flex-direction: column;
     background-color: var.$headbg;
     padding: 1em;
+    
     .logo{
         max-width: 8em;
         max-height: 8em;
@@ -23,6 +24,7 @@
     a{
         text-decoration: none;
     }
+    
 }
 }
 
@@ -36,13 +38,14 @@
 /* tablet */
 @media screen and (min-width:577px) and (max-width:768px){
     .logo {
-        margin-top: .5;
+        margin-top: .5em;
         margin-bottom: .5em;
     } 
 }
 
 /*Desktop*/
 @media screen and (min-width: 769px){
+
     .menuexpandible{
         display: flex;
         align-self: center;
@@ -56,10 +59,10 @@
     .listanav{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         li{
-        margin: 0 2em;
+        margin: 0 5em;
         a{
             font-size: 1.5em;
             font-weight: 600;

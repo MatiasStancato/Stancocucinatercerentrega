@@ -34,22 +34,23 @@ body{
         flex-direction: column;
         justify-content: center;
             img{
-                margin: 1em;
-                max-width: 50%;
-                border-radius: 70px;
-                object-fit: cover;
+                max-height: 95%;
+                max-width: 80%;
                 align-self:center;
+                border-radius: 80px;
                 padding: 0 .5em;
+                object-fit: scale-down;
                 animation: expandir;
-                animation-duration: 3s;
+                animation-duration: 1s;
                 animation-timing-function: ease-in;
+                margin:1em 0;
             }
             @keyframes expandir{
             from{
-            width: 0%;
+            scale: 0;
                 }
                 to{
-                    width: 100%;
+                    scale:(1);
                 }
             }    
         }
@@ -57,8 +58,9 @@ body{
             grid-area:secundario;   /* asignacion de espacio en la grid area */
             display:flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             padding: .5em;
+            margin-bottom: 1em;
 
             h1{
                 text-align:center;
@@ -70,7 +72,7 @@ body{
             h2{
                 font-size: 2em;
                 text-align: center;
-
+                text-decoration: underline;
                 }
             p{
                 font-size: 1em;
@@ -87,6 +89,7 @@ body{
             font-size: 2.5em;
             font-weight: 300;
             padding: 0px 2px;
+            margin-top: 1em;
                 &:hover{       /* animacion para el icono productos */
                 color: white ;
                 text-shadow: 8px 8px 6px var.$fontshadow;
@@ -106,6 +109,11 @@ body{
     font-size: 4em;
     font-weight: 500;
     padding: 0 1em;
+    margin-top: .5em;
+    text-decoration: underline;
+    }
+    h2{
+        text-decoration: underline;
     }
     .articulosuperior, .articuloinferior{
         display: flex;
@@ -117,10 +125,6 @@ body{
             margin:auto;
             padding: 0 2px;
         }
-    }
-    h2{
-        text-decoration: underline;
-        font-size: 2em;
     }
     p{
         font-size: 1.1em;
@@ -163,9 +167,11 @@ body{
                 text-align:center;
                 font-size: 4em;
                 font-weight: 500;
+                text-decoration: underline;
                 }
             h2{
                 font-size: 2em;
+                text-decoration: underline;
                 }
             p{
                 font-size: 1.2em;
@@ -200,17 +206,24 @@ body{
  /* PAGINA QUIENES SOMOS RESPOSIVE+BOOTSTRAP */
 .quienessomoscentral{
     h1{
+        color: var.$sidebg;
         text-align: center;
         font-size: 4em;
         font-weight: 500;
+        text-decoration: underline;
     }
     h2{
+        color:var.$bordesmarrones;
         text-align: center;
+        font-weight: 700;
+        font-size: 2em;
+        text-decoration: underline;
     }
     .artquienessomos {
-        color: var.$hovercolor;
+        color: var.$bordesmarrones;
         font-weight: 700;
-        background-image: url(../img/cupcakes.jpg);
+        font-size: 1.2em;
+        background-image: url(../img/birthdaygirl.jpg);
         background-position: center center;
         background-size: cover;
         background: fill;
@@ -221,41 +234,61 @@ body{
         justify-content: center;
         text-align: center;
         padding: 1.5em;
-    }
+        h2{
+            font-size: 2em;
+        }
+        }
+    
+
 }
 
 /* PAGINA CONTACTO RESPONSIVE +BOOTSTRAP */
 .contactocentral{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0 2em;
+    text-align: center;
+    margin-bottom: 1em;
+        h1{
+            font-size: 4em;
+            text-decoration: underline;
+            margin-top: .5em;
+        }
         h2{
-            text-align: center;
+            font-size: 2em;
+            text-decoration: underline;
         }
-        p{
-            text-align: center;
+        .contactos{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 2em 0;
         }
-        .datoscontacto{
+        .datosContacto{
+            max-height: 97%;
             display: flex;
             flex-direction: column;
-            justify-content: start;
             font-size: 1.5em;
             border-radius: 20px;
             max-width: 100%;
             max-height: auto;
             border: 2px solid var.$bordesmarrones;
-            padding: 1em 2em;
-            margin-bottom: 1em;
-            align-items: start;
             background:var.$formbg ;
             color:var.$sidebg ;
+
                 li{
                     list-style: none;
+                    text-align: start;
+                }
+                p{
+                    text-align: center;
+                    margin: 1em ;
+                }
+                h2{
+                    margin: .5em auto;
                 }
                         }
-        .formulariocontacto{
+        .formularioContacto{
             display: flex;
             flex-direction: column;
             max-width: 100%;
@@ -278,12 +311,10 @@ body{
                         align-items: start;
             }
                         }
-        .ubicacion{     
-            max-width: 100%;
-            max-height: auto;
-            padding: 1em;
-                    }
 }
+                .ubicacion{
+                    border-radius: 20px;
+                }
 }
 /* mobile */
 @media screen and (max-width:576px){
@@ -325,15 +356,17 @@ h1{
     padding: .5px;
     flex-direction: column;
     text-align:center;
+
+    .recetaarticulos{
     img{
         max-width: 70%;
         border-radius: 20px;
     }
     .botonvermas{
-        max-width: 30%;
+        max-width: 50%;
     }
 }
-
+}
 .productoscentral{
     display: flex;
     flex-direction: column;
@@ -346,14 +379,27 @@ h1{
         text-align: center;
         align-items: center;
     }
-    .botonvermas{
-        max-width: 60%;
-        margin: auto;
-    }
+    .productosSuperior,.productosInferior{
+        .botonvermas{
+            max-width: 80%;
+            margin: auto;
+        }
+        
 }
-.ubicacion{
-    max-width: 100%;
-    padding: 0 2px;
+}
+.contactocentral{
+    .contactos{
+    display: flex;
+    flex-direction: column;
+}
+    .formularioContacto{
+        margin-top: 2em;
+    }
+    .ubicacion{
+        max-width: 100%;
+        align-items: center;
+    }
+
 }
 }
 /* tablet */
@@ -361,7 +407,7 @@ h1{
 .contenedor{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% auto auto auto;
+    grid-template-rows: 20% auto auto 20%;
     grid-template-areas:
     "header         header  header"
     "seccionmenu    main    main"
@@ -387,38 +433,63 @@ h1{
     text-align: center;
     h1{
         font-size: 2em;
-        margin-top: 10px;
+        margin-top: 1em;
         }
     h2{
             font-size: 1.5em;
         }
-    img{
-        max-width: 60%;
-        max-height: 20%;
-        object-fit: scale-down;
-        border-radius: 20px;
-    }
+    .recetaarticulos{   
+        img{
+            max-width: 100%;
+            max-height: auto;
+            border-radius: 20px;
+            padding: 0 .5em;
+        }
+        .botonvermas{
+            max-width: 50%;
+        }
+        h2{
+            margin-top: 1em;
+        }
+    }        
 
-    .botonvermas{
-        max-width: 42%;
-    }
+
 }
-.productoslista{
+.productoscentral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    .productoslista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .productosSuperior,.productosInferior{
     .botonvermas{
-        min-width: 45%;
-        max-width: 55%;
+        max-width: 80%;
         margin: auto;
     }
 }
-.ubicacion{
-    max-width: 100%;
+}
+.contactocentral{
+    .contactos{
+    display: flex;
+    flex-direction: column;
+}
+    .formularioContacto{
+        margin-top: 2em;
+    }
+    .ubicacion{
+        max-width: 100%;
+        align-items: center;
+        border-radius: 20px;
+    }
+
 }
 }
-
-
-
-
-
 /*desktop*/
 @media screen and (min-width: 769px){
 .contenedor{
@@ -430,33 +501,36 @@ h1{
             "main   secundario"
             "footer footer";
     }
+    .recetaarticulos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
         .recetascentral{
         padding: .5px;
         flex-direction: column;
         text-align:center;
             img{
-        max-width: 50%;
+        max-width: 30em;
         border-radius: 20px;
         margin: 1em 0;
         }
         .botonvermas{
-            max-width: 20%;
+            max-width: 30%;
         }
-    }
-    .botonvermas{
-        max-width: 100%;
     }
     .productoslista{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-content: center;
+        margin: 1em 1em;
+        padding: 0 1em;
         text-align: center;
-        align-items: center;
-
         img{
             max-width: 60%;
             max-height: auto;
+            
         }
         .botonvermas{
                 min-width: 25%;
@@ -464,15 +538,21 @@ h1{
                 margin: auto;
             }
         }
-    
+        p{
+            max-width: 80%;
+            margin: 1em auto;
+        }
     .quienessomos{
         h1{
             text-align: center;
             font-size: 4em;
             font-weight: 500;
         }
-
 }
+}
+
+
+
 
 
 
