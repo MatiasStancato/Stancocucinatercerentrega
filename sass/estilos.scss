@@ -495,7 +495,7 @@ h1{
 .contenedor{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 26% auto auto;
+        grid-template-rows: 27% auto auto;
         grid-template-areas:
             "header header" 
             "main   secundario"
