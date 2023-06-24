@@ -648,8 +648,11 @@ body {
   .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25% auto auto;
+    grid-template-rows: 30% auto auto;
     grid-template-areas: "header header" "main   secundario" "footer footer";
+  }
+  .header {
+    max-height: 100%;
   }
   .recetaarticulos {
     display: flex;
